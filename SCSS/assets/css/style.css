@@ -1,54 +1,170 @@
+@import 'main.css';
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: #007bff;
+  color: white;
 }
 
-.result {
-  color: yellow;
+.button {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #007bff;
+}
+
+body {
+  font-size: 16px;
+}
+
+/*
+  This is a multi-line comment
+  It can span multiple lines
+  Useful for providing detailed explanations
+*/
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.element {
+  color: red;
 }
 
 .item-1 {
-  width: 100px;
+  width: 2;
 }
 
 .item-2 {
-  width: 200px;
+  width: 4;
 }
 
 .item-3 {
-  width: 300px;
+  width: 6;
 }
 
-.box-red {
+.item-4 {
+  width: 8;
+}
+
+.item-5 {
+  width: 10;
+}
+
+.item-6 {
+  width: 12;
+}
+
+.item-7 {
+  width: 14;
+}
+
+.item-8 {
+  width: 16;
+}
+
+.item-9 {
+  width: 18;
+}
+
+.item-10 {
+  width: 20;
+}
+
+.color-red {
   background-color: red;
 }
 
-.box-green {
-  background-color: green;
-}
-
-.box-blue {
+.color-blue {
   background-color: blue;
 }
 
+.color-green {
+  background-color: green;
+}
+
 .item-1 {
-  width: 50px;
+  width: 2;
 }
 
 .item-2 {
-  width: 100px;
+  width: 4;
 }
 
 .item-3 {
-  width: 150px;
+  width: 6;
+}
+
+.item-4 {
+  width: 8;
+}
+
+.item-5 {
+  width: 10;
+}
+
+.item-6 {
+  width: 12;
+}
+
+.item-7 {
+  width: 14;
+}
+
+.item-8 {
+  width: 16;
+}
+
+.item-9 {
+  width: 18;
+}
+
+.item-10 {
+  width: 20;
+}
+
+.primary-button {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+}
+
+.button-width {
+  width: 20;
 }
 
 body {
-  background-color: #fff;
+  background-color: #007bff;
+  color: rgb(0, 0, 255);
+}
+
+.lighter-color {
+  background-color: #66b0ff;
+}
+
+.darker-color {
+  background-color: #004a99;
+}
+
+.secondary-button, .primary-button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
   color: #333;
 }
 
-.header {
-  background-color: #333;
-  color: #fff;
+.primary-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.secondary-button {
+  background-color: #6c757d;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

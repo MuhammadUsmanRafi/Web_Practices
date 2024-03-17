@@ -1,237 +1,186 @@
-// @import "variables";
+$primary-color: #007bff;
+body {
+  background-color: $primary-color;
+  color: white;
+}
+.button {
+  background-color: $primary-color;
+  color: white;
+  border: 1px solid $primary-color;
+}
 
-// body {
-//     font-family: $myFont;
-//     font-size: $myFontSize;
-//     color: $myColor;
-// }
+$number: 42;
+$pi: 3.14;
+$negativeNumber: -5;
 
-// #container {
-//     width: $myWidth
-// }
-// global variables
-// $myColor: rgb(213, 77, 204);
+$string1: "hello";
+$string2: 'world';
+$phrase: "Sass is awesome!";
 
-// h1 {
-//   $myColor: rgb(89, 152, 86) !global;
-//   color: $myColor;
-// }
+$red: #ff0000;
+$blue: rgb(0, 0, 255);
+$semiTransparent: rgba(255, 0, 0, 0.5);
+$green: hsl(120, 100%, 50%);
 
-// p {
-//   color: $myColor;
-// }   
-// nav {
-//     ul {
-//       margin: 0;
-//       padding: 0;
-//       list-style: none;
-//     }
-//     li {
-//       display: inline-block;
-//     }
-//     a {
-//       display: block;
-//       padding: 6px 12px;
-//       text-decoration: none;
-//     }
-//   }
-//mixin
-// @mixin important-text($color,$font-size) {
-//   font-weight: bold;
-//   border: 1px solid blue;
-// }
-// .danger {
-//   @include important-text(red,25px);
-//   background-color: green;
-// }
-//extends
-// .button-basic  {
-//   border: none;
-//   padding: 15px 30px;
-//   text-align: center;
-//   font-size: 20px;
-//   cursor: pointer;
-// }
+$isPrimaryColor: true;
+$isDarkMode: false;
 
-// .button-report  {
-//   @extend .button-basic;
-//   background-color: red;
-// }
-
-// .button-submit  {
-//   @extend .button-basic;
-//   background-color: rgb(189, 57, 215);
-//   color: rgb(240, 232, 232);
-// }
-//SASS Operations
-// Define variables
-// $width: 100px;
-// $padding: 10px;
-
-// Addition
-// .element {
-//   width: $width + $padding;
-// }
-
-// Subtraction
-// .element {
-//   margin-right: $width - $padding;
-// }
-
-// Multiplication
-// .element {
-//   height: $width * 2;
-// }
-
-// Division
-// .element {
-//   font-size: $width / 2;
-// }
-
-
-//sass functions
-// Math Functions
-// $sum: add(5, 10);
-// $difference: subtract(20, 7);
-// $product: multiply(8, 4);
-// $quotient: divide(50, 2);
-
-// Color Functions
-// $color: #db6934;
-// $lighter: lighten($color, 20%);
-// $darker: darken($color, 20%);
-// $saturated: saturate($color, 20%);
-// $desaturated: desaturate($color, 20%);
-// $hueAdjusted: adjust-hue($color, 30deg);
-// $complementColor: complement($color);
-// $invertedColor: invert(rgba(255, 255, 255, 0.938));
-// $mixedColor: mix($color, #e74c3c, 50%);
-
-// String Functions
-// $string: "Hello, World!";
-// $quotedString: quote($string);
-// $unquotedString: unquote($quotedString);
-// $stringLength: str-length($string);
-// $uppercaseString: to-upper-case($string);
-// $lowercaseString: to-lower-case($string);
-// $insertedString: str-insert($string, " beautiful", 6);
-
-// List Functions
-// $list1: (1, 2, 3);
-// $list2: (4, 5, 6);
-// $joinedList: join($list1, $list2, comma);
-// $appendedList: append($list1, 7, space);
-// $nthItem: nth($list1, 2);
-// $lengthOfList: length($list1);
-// $zippedList: zip($list1, $list2);
-
-// Map Functions
-// $map1: (key1: value1, key2: value2);
-// $map2: (key3: value3, key4: value4);
-// $valueByKey: map-get($map1, key1);
-// $mergedMap: map-merge($map1, $map2);
-// $removedKeyMap: map-remove($map1, key1);
-// $mapKeys: map-keys($map1);
-// $mapValues: map-values($map1);
-
-// Control Flow Functions
-// $condition: true;
-// $result: if($condition, "True Result", "False Result");
-// $featureExistence: feature-exists("global-variable-shadowing");
-
-// Miscellaneous Functions
-// $unitlessValue: 0.75;
-// $percentageValue: percentage($unitlessValue);
-// $roundedNumber: round(3.75);
-// $ceiledNumber: ceil(3.25);
-// $flooredNumber: floor(3.75);
-// $absoluteValue: abs(-5);
-
-// Apply styles using the calculated values
-// .element {
-//   background-color: $color;
-//   color: $invertedColor;
-//   padding: $ceiledNumber * 10px;
-//   margin: $flooredNumber * 5px;
-//   font-size: $absoluteValue * 2px;
-// }
-
-
-//SASS conditional directives
-//if directive
-$theme: light;
+$property: "font-size";
+$value: 16px;
 
 body {
-  @if $theme==light {
-    background-color: #fff;
-    color: #333;
-  }
+  #{$property}: $value;
+}
 
+// This is a single-line comment
+/*
+  This is a multi-line comment
+  It can span multiple lines
+  Useful for providing detailed explanations
+*/
+
+$add-operator: 10 + 5;
+$subtract-operator: 10 - 5;
+$multiply-operator: 10 * 5;
+$divide-operator: 10 \ 5;
+$modulus-operator: 10 % 5;
+
+$less-operator: 10 < 5;
+$greator-operator: 10 > 5;
+$equality-operator: 10 == 5;
+$inequality-operator: 10 != 5;
+$lessequal-operator: 10 <= 5;
+$greatoreq-operator: 10 >= 5;
+
+$and-operator: true and false;
+$or-operator: true or false;
+$not-operator: not false;
+
+$concatenation: "Hello" + " " + "world";
+
+$color : red;
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      a {
+        text-decoration: none;
+        color: #007bff;
+      }
+    }
+  }
+}
+
+
+.element{
+  @if $color == blue{
+    color: $color;
+  }
+  @else if $color == green{
+    color: $color;
+  }
   @else {
-    background-color: #333;
-    color: #fff;
+    color: $color;
   }
 }
 
-//else and if else if 
-$grades: 75;
 
-@if $grades>90 {
-  .result {
-    color: green;
+@for $item from 1 through 10{
+  .item-#{$item} {
+    width: 2 * $item;
   }
 }
 
-@else if $grades>70 {
-  .result {
-    color: yellow;
-  }
-}
-
-@else {
-  .result {
-    color: red;
-  }
-}
-
-//for directives
-@for $i from 1 through 3 {
-  .item-#{$i} {
-    width: 100px * $i;
-  }
-}
-
-//each directives
-$colors: red, green, blue;
-
-@each $color in $colors {
-  .box-#{$color} {
+@each $color in red, blue, green {
+  .color-#{$color} {
     background-color: $color;
   }
 }
 
-//while directives
-$i: 1;
-@while $i < 4 {
+
+$i : 1;
+@while $i <= 10{
   .item-#{$i} {
-    width: 50px* $i;
+    width: 2 * $i;
   }
-  $i: $i + 1;
+  $i : $i + 1;
 }
 
-//mixin directive with content
-@mixin theme($theme) {
-  @if $theme == light {
-    background-color: #fff;
-    color: #333;
-  } @else {
-    background-color: #333;
-    color: #fff;
-  }
+@mixin button ($color){
+  background-color: $color;
+  color: white;
+  padding: 10px;
 }
+
+.primary-button {
+  @include button(blue)
+}
+
+@function calculate-width($side){
+  @return $side * 2;
+}
+
+.button-width{
+  width: calculate-width(10);
+}
+
+@import 'variables';
 body {
-  @include theme(light)
+  background-color: $primary-color;
+  color: $blue;
 }
-.header {
-  @include theme (dark)
+
+@import 'main.css';
+$primary-color : var(--primary-color);
+$secondary-color: var(--secondary-color);
+
+
+$base-color: #007bff;
+.lighter-color {
+  background-color: lighten($base-color, 20%);
 }
+.darker-color {
+  background-color: darken($base-color, 20%);
+}
+
+$number: 3.7;
+$rounded-number: round($number);
+
+
+
+%base-button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.primary-button {
+  @extend %base-button;
+  background-color: #007bff;
+  color: white;
+}
+
+.secondary-button {
+  @extend %base-button;
+  background-color: #6c757d;
+  color: white;
+}
+
+
+$colors: (#ff0000, #00ff00, #0000ff);
+$first-color: nth($colors, 1); 
+
+$font-sizes: (
+  small: 12px,
+  medium: 16px,
+  large: 20px
+);
+$medium-font-size: map-get($font-sizes, medium); 
